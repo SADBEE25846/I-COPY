@@ -4,9 +4,8 @@
 using namespace std;
 
 int main(){
-    int *ptr0,var=11;
-    ptr0=&var;
-    cout<<*ptr0;
+    int ls[5]={1,2,3,4,5};
+    cout<<*(ls+1);
     return 0;
 }
 

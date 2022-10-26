@@ -7,7 +7,7 @@ int main(){
         for (int j=0;j<10;j++){
             cout<<i<<"x"<<j<<"="<<i*j;
             if ((i*j)<10)cout<<"  ";else cout<<" ";
-            
+   
         }
         cout<<"\n";
     }

@@ -12,7 +12,7 @@ p1_card=p2_card=[]
 print(p1_card,p2_card)
 for i in range(2):
     add_number(0)
-for i in range(2):
+for j in range(2):
     add_number(1)
 print(p1_card)
 print(p2_card)

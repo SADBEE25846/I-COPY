@@ -10,7 +10,12 @@ int main(){
     while (target!=guess){
         cout<<"Input A Number"<<endl;
         cin>>guess;
-        if (guess<target)cout<<"Too Small";else if (guess<target)cout<<"Too Big"<<endl;
+        if (guess<target){
+            cout<<"Too Small"<<endl;
+        }
+        else if (guess>target){
+            cout<<"Too Big"<<endl;
+        }
     }
     return 0;
 }

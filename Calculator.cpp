@@ -9,19 +9,25 @@ int main(){
     switch (mod)
     {
     case 0:
+        ptr=sum;
         break;
-    
+    case 1:
+        ptr=sub;
+    case 2:
+        ptr=mul;
+    case 3:
+        ptr=div;
     default:
         break;
     }
     return 0;
 }
-int sum(){
+int sum(int a,int b){
 
 }
-int sub(){
+int sub(int a,int b){
 
 }
-int mul(){
+int mul(int a,int b){
 
 }

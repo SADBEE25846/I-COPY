@@ -1,5 +1,5 @@
-#include <iostream>
 #include <cstdlib>
+#include <iostream>
 using namespace std;
 int sum(int,int);
 int main(){
@@ -13,10 +13,12 @@ int main(){
         break;
     case 1:
         ptr=sub;
+        break;
     case 2:
         ptr=mul;
+        break;
     case 3:
-        ptr=div;
+        break;
     default:
         break;
     }

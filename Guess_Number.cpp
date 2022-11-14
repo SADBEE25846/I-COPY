@@ -4,18 +4,10 @@
 using namespace std;
 int main(){
     int guess,seed,target;
+    for (int i=0;i<8;i++){
     seed=time(NULL);
     srand(seed);
     target=rand();
-    while (target!=guess){
-        cout<<"Input A Number"<<endl;
-        cin>>guess;
-        if (guess<target){
-            cout<<"Too Small"<<endl;
-        }
-        else if (guess>target){
-            cout<<"Too Big"<<endl;
-        }
-    }
+    cout<<target<<"\n";}
     return 0;
 }

@@ -4,11 +4,14 @@
 using namespace std;
 int main(){
     struct Student{
-        string name;
-        int score;
-        char subject[4][10]={"Chinese","English","Math","Science"};
+        int score[7];
+        char subject[7][10];
+        struct Test_Pointer
+        {
+
+        };        
     };
-    struct Student marco;
-    marco.score=100;
-    cout<<"After Break";
-}
+    struct Student a2b[5]={};
+    a2b[2].subject[0];
+
+} 

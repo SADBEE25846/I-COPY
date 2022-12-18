@@ -1,7 +1,8 @@
 #include <iostream>
 #include <string>
+#include "mcLib"
 using namespace std;
-class student{
+class student{ ,m cc
     private:
     int classPav;
     public:

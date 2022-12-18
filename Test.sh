@@ -1,1 +1,1 @@
-ls
+g++ 21_Points.cpp

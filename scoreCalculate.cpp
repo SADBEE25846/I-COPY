@@ -1,14 +1,13 @@
-/*#Thanks to Kimmy for the orignal version of the code 
+/*Thanks to Kimmy for the orignal version of the code 
 Link: https://www.onlinegdb.com/mXYTlA1Lg
 By MCL7D9*/
 #include <iostream>
-#include <cstdlib>
 #include <string>
 using namespace std;
 
 int main() {   
      START:
-     int score[17],final,y=1;
+     int score[17]={0},final=y=1;
      string subjects[15]={"Eng1","Eng2","Eng3","Eng4","Eng Dict","Chin1","Chin2","Chin3","Math","Sci","C.Hist","Hist","Geog","Eng","Chin"};
      cout<<"Which modes do you wanna choose,exam or CT?(1 for exam,2 for CT,3 for term mark)"<<endl;cin>>y;
      cout<<"Enter your mark in xx/100"<<endl;
